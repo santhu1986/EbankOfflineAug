@@ -1,0 +1,74 @@
+package com.EbankingScripts;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class SampleMvn {
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		// Launch Browser
+		
+
+		String ExpVal="Ranford Bank";
+		
+		WebDriver driver=new FirefoxDriver();
+		
+		//Maximize
+		
+		driver.manage().window().maximize();
+		
+		//URL
+		
+		driver.get("http://103.211.39.246/ranford2/");
+		
+		String ActVal=driver.findElement(By.xpath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[4]/p/span")).getText();
+		
+		//Comparision
+		
+		if(ExpVal.equalsIgnoreCase(ActVal)) 
+		{
+			System.out.println("Application Launch Succ");
+		}
+		else
+		{
+			System.out.println("Application Failed To Launch");
+		}
+			
+		
+		//GetTitle
+		
+		String Tit=driver.getTitle();
+		System.out.println(Tit);
+		
+		// Admin Login
+		
+		ExpVal="Welcome to Admin";
+		
+		driver.findElement(By.id("txtuId")).sendKeys("Admin");
+		driver.findElement(By.id("txtPword")).sendKeys("Mindq@Prj");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@id=\"login\"]")).click();
+		
+		ActVal=driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[4]/strong/font/font")).getText();
+		
+		//Comparision
+		
+		if (ExpVal.equalsIgnoreCase(ActVal)) 
+		{
+		System.out.println("Admin Login Succ");	
+		}
+		else
+		{
+			System.out.println("Admin Login Failed");
+		}
+		
+		
+		
+		
+		
+	}
+
+}

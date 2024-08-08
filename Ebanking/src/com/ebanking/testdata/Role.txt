@@ -1,0 +1,5 @@
+RoleName###RoleType###Results
+ClerkSBIJly###E
+GmanagerSBIJly###E
+CashierSBIJly###E
+PoSBIJly###E

@@ -1,0 +1,5 @@
+RoleName###RoleType###Results
+ClerkSBIJly###E&^$&$#@Role Already existed
+GmanagerSBIJly###E&^$&$#@Role Already existed
+CashierSBIJly###E&^$&$#@Role Already existed
+PoSBIJly###E&^$&$#@Role Already existed

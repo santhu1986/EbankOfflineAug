@@ -1,0 +1,9 @@
+Feature: Admin Login
+
+Scenario: Verify Admin Login Functionality
+
+Given User should on RHP
+
+When User enters uname and password
+
+Then User validates Admin Login functionality
